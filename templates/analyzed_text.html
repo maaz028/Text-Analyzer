@@ -1,0 +1,38 @@
+{% extends "index2.html" %}
+
+{% block body %}
+
+<style>
+    h1{
+        margin: 20px;
+        font-family: 'Abel', sans-serif;
+    }
+    .text{
+        margin: 20px;
+        font-family: 'Abel', sans-serif;
+    }
+</style>
+  <div>
+      <h1>Analyzed Text</h1>
+      <div class="text">{{analyze}}</div>
+  </div>
+
+ 
+
+{% endblock  %}
+
+{% block script %}
+  
+
+<script>
+    console.log('working')
+  {% if yes %}
+  sweetAlert(
+                'Analyzed',
+                'Text Analyzed Successfully!',
+                'success'
+              )
+  {% endif %}
+
+</script>
+{% endblock %}
